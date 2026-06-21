@@ -1,8 +1,7 @@
-
-import { Terminal, Code2, Cpu, Globe, Github, Linkedin, Mail, ExternalLink, Award } from 'lucide-react';
+import { Terminal, Code, Cpu, Globe, Github, Linkedin, Mail, ExternalLink, Award } from 'lucide-react';
 
 function App() {
-  // --- CUSTOM DATA (Update these arrays with your details) ---
+  // --- CUSTOM DATA ---
   const projects = [
     {
       title: "Real-Time Collaborative Dashboard",
@@ -113,7 +112,7 @@ function App() {
           {skillCategories.map((cat, index) => (
             <div key={index} className="p-6 bg-slate-800/40 rounded-lg border border-slate-800 hover:border-slate-700 transition-colors">
               <h3 className="font-semibold text-teal-400 mb-4 flex items-center gap-2">
-                {index === 0 && <Code2 size={18} />}
+                {index === 0 && <Code size={18} />}
                 {index === 1 && <Globe size={18} />}
                 {index === 2 && <Cpu size={18} />}
                 {cat.title}
@@ -139,7 +138,7 @@ function App() {
           {projects.map((proj, index) => (
             <div key={index} className="flex flex-col bg-slate-800/30 rounded-lg border border-slate-800 p-6 hover:-translate-y-1 transition-transform duration-300">
               <div className="flex justify-between items-center mb-6">
-                <Code2 className="text-teal-400" size={28} />
+                <Code className="text-teal-400" size={28} />
                 <div className="flex gap-3 text-slate-400">
                   <a href={proj.github} className="hover:text-teal-400 transition-colors"><Github size={18} /></a>
                   <a href={proj.live} className="hover:text-teal-400 transition-colors"><ExternalLink size={18} /></a>
@@ -148,7 +147,7 @@ function App() {
               <h3 className="text-xl font-bold text-slate-200 mb-3 hover:text-teal-400 transition-colors">
                 {proj.title}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+              <p className="text-slate-400 text-sm leading-relaxed mb-6 grow">
                 {proj.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">
